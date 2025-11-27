@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background: #0246a8;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #0246a8;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.form-box {
+    width: 350px;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.form-box label {
+    font-weight: bold;
+}
+
+.form-box input, 
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+.hero {
+    height: 500px;
+    background-image: url("scrietimage.jpg"); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.hero2 {
+    height: 600px;
+    background-image: url("main-1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}

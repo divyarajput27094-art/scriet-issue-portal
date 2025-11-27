@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Complaint Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Check Your Complaint Status</h2>
+
+    <label>Enter Complaint ID:</label>
+    <input type="text" id="checkId" placeholder="SCR-1234567890">
+    <button onclick="checkStatus()">Check Status</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkStatus() {
+            const id = document.getElementById('checkId').value;
+            const complaints = JSON.parse(localStorage.getItem('complaints')) || [];
+            const complaint = complaints.find(c => c.id === id);
+
+            const resultDiv = document.getElementById('result');
+            if (complaint) {
+                resultDiv.innerHTML = `
+                    <p><strong>Issue Type:</strong> ${complaint.issueType}</p>
+                    <p><strong>Location:</strong> ${complaint.location}</p>
+                    <p><strong>Description:</strong> ${complaint.description}</p>
+                    <p><strong>Status:</strong> ${complaint.status}</p>
+                    <p><strong>Date:</strong> ${complaint.date}</p>
+                `;
+            } else {
+                resultDiv.innerHTML = '<p style="color:red;">Complaint ID not found!</p>';
+            }
+        }
+    </script>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Complaint Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Check Your Complaint Status</h2>
+
+    <label>Enter Complaint ID:</label>
+    <input type="text" id="checkId" placeholder="SCR-1234567890">
+    <button onclick="checkStatus()">Check Status</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkStatus() {
+            const id = document.getElementById('checkId').value;
+            const complaints = JSON.parse(localStorage.getItem('complaints')) || [];
+            const complaint = complaints.find(c => c.id === id);
+
+            const resultDiv = document.getElementById('result');
+            if (complaint) {
+                resultDiv.innerHTML = `
+                    <p><strong>Issue Type:</strong> ${complaint.issueType}</p>
+                    <p><strong>Location:</strong> ${complaint.location}</p>
+                    <p><strong>Description:</strong> ${complaint.description}</p>
+                    <p><strong>Status:</strong> ${complaint.status}</p>
+                    <p><strong>Date:</strong> ${complaint.date}</p>
+                `;
+            } else {
+                resultDiv.innerHTML = '<p style="color:red;">Complaint ID not found!</p>';
+            }
+        }
+    </script>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Complaint Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Check Your Complaint Status</h2>
+
+    <label>Enter Complaint ID:</label>
+    <input type="text" id="checkId" placeholder="SCR-1234567890">
+    <button onclick="checkStatus()">Check Status</button>
+
+    <div id="result"></div>
+    <script>
+        function checkStatus() {
+            const id = document.getElementById('checkId').value;
+            const complaints = JSON.parse(localStorage.getItem('complaints')) || [];
+            const complaint = complaints.find(c => c.id === id);
+
+            const resultDiv = document.getElementById('result');
+            if (complaint) {
+                resultDiv.innerHTML = `
+                    <p><strong>Issue Type:</strong> ${complaint.issueType}</p>
+                    <p><strong>Location:</strong> ${complaint.location}</p>
+                    <p><strong>Description:</strong> ${complaint.description}</p>
+                    <p><strong>Status:</strong> ${complaint.status}</p>
+                    <p><strong>Date:</strong> ${complaint.date}</p>
+                `;
+            } else {
+                resultDiv.innerHTML = '<p style="color:red;">Complaint ID not found!</p>';
+            }
+        }
+    </script>
+</body>
+</html>

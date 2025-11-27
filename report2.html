@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Issue</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <h2 class="title">Submit Your Complaint (Anonymous)</h2>
+
+    <form class="form-box">
+        
+        <label>Issue Type</label>
+        <select required>
+            <option>Classroom Issue</option>
+            <option>Lab Issue</option>
+            <option>Cleanliness</option>
+            <option>Washroom Problem</option>
+            <option>Faculty Behaviour</option>
+            <option>Water Cooler</option>
+            <option>Electricity / Fan / Light</option>
+        </select>
+
+        <label>Location</label>
+        <input type="text" placeholder="Block A, Room 203" required>
+
+        <label>Description</label>
+        <textarea placeholder="Explain the issue..." required></textarea>
+
+        <label>Upload Photo (optional)</label>
+        <input type="file">
+
+        <button class="btn">Submit Issue</button>
+    </form>
+    <script>
+    const form = document.querySelector('.form-box');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // page reload nahi hoga
+
+        // Collect data
+        const issueType = form.querySelector('select').value;
+        const location = form.querySelector('input').value;
+        const description = form.querySelector('textarea').value;
+        const id = 'SCR-' + Date.now(); // unique complaint ID
+
+        // Create complaint object
+        const complaint = {
+            id: id,
+            issueType: issueType,
+            location: location,
+            description: description,
+            status: 'Pending',
+            date: new Date().toLocaleDateString()
+        };
+
+        // Get existing complaints from localStorage
+        let complaints = JSON.parse(localStorage.getItem('complaints')) || [];
+
+        // Add new complaint
+        complaints.push(complaint);
+
+        // Save back to localStorage
+        localStorage.setItem('complaints', JSON.stringify(complaints));
+
+        // Show alert
+        alert('Complaint submitted successfully! Your complaint ID is: ' + id);
+
+        // Reset form
+        form.reset();
+    });
+</script>
+</body>
+</html>
